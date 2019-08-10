@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "A Friend Finder App built with Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcxii/friend-finder.git"
+  },
+  "author": "Nich Secord",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmcxii/friend-finder/issues"
+  },
+  "homepage": "https://github.com/mmcxii/friend-finder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
