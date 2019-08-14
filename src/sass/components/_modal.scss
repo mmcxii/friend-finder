@@ -1,0 +1,56 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 300ms;
+
+    &__btn {
+        &--close {
+            position: absolute;
+            top: $spacing-xs;
+            right: $spacing-xs;
+            font-size: 2rem;
+            line-height: 1rem;
+            transition: ease-in-out 250ms;
+            color: var(--clr-light);
+
+            &:hover {
+                color: var(--clr-light-2);
+            }
+        }
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    .card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 98%;
+
+        @include mq(sm) {
+            width: 80%;
+        }
+
+        @include mq(md) {
+            width: 70%;
+        }
+
+        @include mq(lg) {
+            width: 60%;
+        }
+
+        @include mq(xl) {
+            width: 50%;
+
+            max-width: 650px;
+        }
+    }
+}

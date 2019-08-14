@@ -1,0 +1,25 @@
+.card {
+    background: var(--clr-dark-2);
+    border-radius: $rounded;
+    overflow: hidden;
+    box-shadow: 3px 4px 7px var(--clr-purple-2);
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        background: var(--clr-purple-2);
+        padding: $spacing-xs;
+        border-radius: $rounded;
+        display: grid;
+        grid-template-columns: max-content;
+    }
+
+    &__body {
+        padding: $spacing-sm;
+    }
+
+    &__text {
+        margin-bottom: $spacing-sm;
+    }
+}

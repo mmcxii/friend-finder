@@ -1,0 +1,68 @@
+.result {
+    &__photo {
+        border-radius: $rounded;
+        min-width: 200px;
+        max-width: 50%;
+        margin: $spacing-sm auto;
+        display: block;
+    }
+
+    &__scores {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, max-content);
+        grid-template-areas:
+            '. user-name . match-name .'
+            'html_i css_i sass-less_i js_i react_i'
+            'user-html user-css user-sass-less user-js user-react'
+            'match-html match-css match-sass-less match-js match-react'
+            'git_i node_i php_i csharp_i java_i'
+            'user-git user-node user-php user-csharp user-java'
+            'match-git match-node match-php match-csharp match-java';
+
+        grid-gap: $spacing-xs;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include mq(md) {
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(3, max-content);
+            grid-template-areas:
+                '. html_i css_i sass-less_i js_i react_i git_i node_i php_i csharp_i java_i'
+                'user-name user-html user-css user-sass-less user-js user-react user-git user-node user-php user-csharp user-java'
+                'match-name match-html match-css match-sass-less match-js match-react match-git match-node match-php match-csharp match-java';
+        }
+    }
+
+    &__icon {
+        color: var(--clr-purple);
+        font-size: 2rem;
+
+        $icons: (html, css, sass-less, js, react, git, node, php, csharp, java);
+
+        @each $icon in $icons {
+            &.#{$icon} {
+                grid-area: #{$icon}_i;
+            }
+        }
+    }
+
+    $attrs: (name, html, css, sass-less, js, react, git, node, php, csharp, java);
+
+    @each $attr in $attrs {
+        &__user-#{$attr} {
+            grid-area: user-#{$attr};
+
+            font-weight: bolder;
+        }
+
+        &__match-#{$attr} {
+            --clr: var(--clr-scale-0);
+            grid-area: match-#{$attr};
+
+            color: var(--clr);
+            font-weight: bolder;
+        }
+    }
+}

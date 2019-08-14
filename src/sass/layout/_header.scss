@@ -1,0 +1,20 @@
+.header {
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+
+    padding-top: $spacing-xs;
+    color: var(--clr-purple);
+    font-size: 1rem;
+
+    &__logo {
+        margin-right: $spacing-xs;
+        font-size: 2rem;
+    }
+
+    &__title {
+        margin: 0;
+    }
+}

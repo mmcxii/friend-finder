@@ -12,5 +12,19 @@
 @import 'layout/header';
 @import 'layout/footer';
 
+/* Page */
+@import 'page/index';
+@import 'page/survey';
+
 /* Components */
+@import 'components/modal';
 @import 'components/card';
+@import 'components/btn';
+@import 'components/social';
+@import 'components/byline';
+@import 'components/personal-info';
+@import 'components/result';
+
+/* Animations */
+@import 'animations/flipping';
+@import 'animations/sliding';

@@ -5,9 +5,285 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Friend Finder - Survey</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <script src="https://kit.fontawesome.com/e864d6deb3.js"></script>
     </head>
 
     <body>
-        <h1>Take this survey and we will find you a friend</h1>
+        <header class="header">
+            <i class="header__logo fad fa-user-friends"></i>
+            <h1 class="header__title">Friend Finder</h1>
+        </header>
+        <main class="survey">
+            <section class="card">
+                <h2 class="card__header">Survey Questions</h2>
+                <section class="card__body">
+                    <h3 class="card__subheader">About You</h3>
+                    <form class="personal-info" id="personal-info-form">
+                        <div class="personal-info__group">
+                            <i class="personal-info__icon fas fa-user"></i>
+                            <label for="name" class="personal-info__label">Name (Required)</label>
+                            <input type="text" name="name" class="personal-info__input" required />
+                        </div>
+
+                        <div class="personal-info__group">
+                            <i class="personal-info__icon far fa-portrait"></i>
+                            <label for="photo" class="personal-info__label">Photo (Required)</label>
+                            <input type="text" name="photo" class="personal-info__input" required />
+                        </div>
+
+                        <hr class="personal-info__divider" />
+
+                        <p class="personal-info__instructions">
+                            Please rate the following technologies from 1 (strongly dislike) to 5 (strongly
+                            like).
+                        </p>
+
+                        <h3 class="card__subheader">Front End</h3>
+
+                        <div class="personal-info__group">
+                            <label for="html" class="personal-info__label">
+                                HTML
+                            </label>
+                            <select name="html" id="html" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-html5"></i>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="css" class="personal-info__label">
+                                CSS
+                            </label>
+                            <select name="css" id="css" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-css3-alt"></i>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="sass-less" class="personal-info__label">
+                                Sass/ Less
+                            </label>
+                            <select name="sass-less" id="sass-less" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <div class="flipping personal-info__icon">
+                                <div class="front">
+                                    <i class="fab fa-sass"></i>
+                                </div>
+                                <div class="back">
+                                    <i class="back fab fa-less"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="js" class="personal-info__label">
+                                Vanilla Javascript
+                            </label>
+                            <select name="js" id="js" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-js"></i>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="react" class="personal-info__label">
+                                React
+                            </label>
+                            <select name="react" id="react" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-react"></i>
+                        </div>
+
+                        <hr class="personal-info__divider" />
+
+                        <div class="personal-info__group">
+                            <label for="git" class="personal-info__label">
+                                Git
+                            </label>
+                            <select name="git" id="git" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-git-alt"></i>
+                        </div>
+
+                        <hr class="personal-info__divider" />
+
+                        <h3 class="card__subheader">Back End</h3>
+
+                        <div class="personal-info__group">
+                            <label for="node" class="personal-info__label">
+                                Node.js
+                            </label>
+                            <select name="node" id="node" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-node-js"></i>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="php" class="personal-info__label">
+                                PHP
+                            </label>
+                            <select name="php" id="php" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-php"></i>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="csharp" class="personal-info__label">
+                                C#
+                            </label>
+                            <select name="csharp" id="csharp" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <span class="personal-info__icon">C#</span>
+                        </div>
+
+                        <div class="personal-info__group">
+                            <label for="java" class="personal-info__label">
+                                Java
+                            </label>
+                            <select name="java" id="java" class="personal-info__select">
+                                <option value="1">1 (Strongly Dislike)</option>
+                                <option value="2">2 (Somewhat Dislike)</option>
+                                <option value="3">3 (Indifferent)</option>
+                                <option value="4">4 (Somewhat Like)</option>
+                                <option value="5">5 (Strongly Like)</option>
+                            </select>
+                            <i class="personal-info__icon fab fa-java"></i>
+                        </div>
+
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                </section>
+            </section>
+
+            <section class="result modal hide">
+                <div class="card">
+                    <h2 class="card__header">We Found You A Friend!</h2>
+                    <section class="card__body">
+                        <h3 class="result__match-name card__subheader"></h3>
+                        <img alt="A Photo of Your Match" class="result__photo" />
+
+                        <section class="result__scores">
+                            <i class="result__icon html fab fa-html5"></i>
+                            <i class="result__icon css fab fa-css3-alt"></i>
+                            <div class="sliding sass-less result__icon">
+                                <i class="sliding__line fab fa-sass"></i>
+                                <i class="sliding__line fab fa-less"></i>
+                            </div>
+                            <i class="result__icon js fab fa-js"></i>
+                            <i class="result__icon react fab fa-react"></i>
+                            <i class="result__icon git fab fa-git-alt"></i>
+                            <i class="result__icon node fab fa-node-js"></i>
+                            <i class="result__icon php fab fa-php"></i>
+                            <span class="result__icon csharp">C#</span>
+                            <i class="result__icon java fab fa-java"></i>
+
+                            <p class="result__user-name"></p>
+                            <p class="result__user-html"></p>
+                            <p class="result__user-css"></p>
+                            <p class="result__user-sass-less"></p>
+                            <p class="result__user-js"></p>
+                            <p class="result__user-react"></p>
+                            <p class="result__user-git"></p>
+                            <p class="result__user-node"></p>
+                            <p class="result__user-php"></p>
+                            <p class="result__user-csharp"></p>
+                            <p class="result__user-java"></p>
+
+                            <p class="result__match-name"></p>
+                            <p class="result__match-html"></p>
+                            <p class="result__match-css"></p>
+                            <p class="result__match-sass-less"></p>
+                            <p class="result__match-js"></p>
+                            <p class="result__match-react"></p>
+                            <p class="result__match-git"></p>
+                            <p class="result__match-node"></p>
+                            <p class="result__match-php"></p>
+                            <p class="result__match-csharp"></p>
+                            <p class="result__match-java"></p>
+                        </section>
+                    </section>
+
+                    <button class="result__modal--close btn--trans modal__btn--close">&times;</button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="byline">
+                Nich Secord &copy; 2019
+                <br />
+                All rights reserved.
+            </div>
+            <section class="social">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a href="https://www.github.com/mmcxii" class="social__link" target="new">
+                            <i class="social__icon fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.linkedin.com/in/mmcxii" class="social__link" target="new">
+                            <i class="social__icon fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://twitter.com/mmcxii__" class="social__link" target="new">
+                            <i class="social__icon fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://www.secord.io/" class="social__link" target="new">
+                            <i class="social__icon fas fa-browser"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+
+        <script src="assets/js/modal.js"></script>
     </body>
 </html>

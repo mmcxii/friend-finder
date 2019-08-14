@@ -1,0 +1,18 @@
+.footer {
+    grid-area: footer;
+
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: 'byline' 'social';
+    grid-gap: $spacing-xs;
+
+    justify-content: center;
+    text-align: center;
+    padding-bottom: $spacing-xs;
+
+    @include mq(md) {
+        grid-template-rows: max-content;
+        grid-template-columns: max-content 1fr max-content;
+        grid-template-areas: 'byline . social';
+    }
+}
