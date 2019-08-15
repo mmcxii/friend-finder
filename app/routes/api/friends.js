@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const friends = require('../../data/Friends');
+const friends = require('../../data/friends');
 const Friend = require('../../templates/Friend');
 
 let foundFriend;
