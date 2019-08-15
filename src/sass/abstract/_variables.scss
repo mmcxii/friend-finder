@@ -1,4 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+);
+
+$spacing-xs: 0.5em;
+$spacing-sm: 1em;
+
+$rounded: 15px;
+
+$ff-h: 'Lato', sans-serif;
+$ff-b: 'Montserrat', sans-serif;
+
 :root {
-    --clr-dark: #333;
-    --clr-light: #eee;
+    --clr-dark: #2d3436;
+    --clr-dark-2: #141b1d;
+    --clr-light: #dfe6e9;
+    --clr-light-2: #c6cdd0;
+    --clr-purple: #6c5ce7;
+    --clr-purple-2: #5343ce;
+
+    --clr-scale-0: #0984e3;
+    --clr-scale-1: #74b9ff;
+    --clr-scale-2: #a29bfe;
+    --clr-scale-3: #ff7675;
+    --clr-scale-4: #d63031;
+
+    --container: 1rem;
+
+    @include mq(md) {
+        --container: 2rem;
+    }
+
+    @include mq(lg) {
+        --container: 4rem;
+    }
+
+    @include mq(xl) {
+        --container: 20%;
+    }
 }

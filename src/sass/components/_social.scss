@@ -1,0 +1,23 @@
+.social {
+    grid-area: social;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline;
+        margin: 0 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    &__link {
+        color: var(--clr-purple);
+        transition: all ease-in-out 250ms;
+        text-decoration: none;
+
+        &:hover {
+            color: var(--clr-light);
+        }
+    }
+}

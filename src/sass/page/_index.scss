@@ -1,0 +1,10 @@
+.intro {
+    grid-area: content;
+
+    display: flex;
+    flex-direction: column;
+
+    &__card {
+        margin: auto;
+    }
+}

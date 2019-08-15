@@ -1,0 +1,11 @@
+$headings: (h1, h2, h3, h4, h5, h6);
+
+#{$headings} {
+    font-family: $ff-h;
+}
+
+body {
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    font-family: $ff-b;
+}

@@ -1,0 +1,30 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: $rounded;
+    padding: $spacing-xs;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+    background: var(--clr-purple);
+    color: var(--clr-light);
+    font-weight: bolder;
+    font-size: 1.1rem;
+    transition: all ease-in-out 250ms;
+    width: 100%;
+
+    &:hover {
+        background: var(--clr-purple-2);
+    }
+
+    &--trans {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+    }
+
+    &__wrapper {
+        text-decoration: none;
+    }
+}

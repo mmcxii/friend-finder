@@ -1,0 +1,45 @@
+.flipping {
+    align-self: center;
+    position: relative;
+    width: 40px;
+    height: 32px;
+
+    .front,
+    .back {
+        width: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+    }
+
+    .front {
+        animation: front-rotate 3.5s linear infinite;
+    }
+
+    .back {
+        animation: back-rotate 3.5s linear infinite;
+    }
+}
+
+@keyframes front-rotate {
+    0% {
+        transform: perspective(600px) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(600px) rotateY(-180deg);
+    }
+    100% {
+        transform: perspective(600px) rotateY(0deg);
+    }
+}
+
+@keyframes back-rotate {
+    0% {
+        transform: perspective(600px) rotateY(180deg);
+    }
+    50% {
+        transform: perspective(600px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(600px) rotateY(-180deg);
+    }
+}

@@ -1,0 +1,44 @@
+.sliding {
+    height: 2.2rem;
+    position: relative;
+    overflow: hidden;
+
+    &__line {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 2rem;
+
+        &:first-child {
+            animation: sliding 3.5s infinite;
+        }
+
+        &:last-child {
+            animation: sliding2 3.5s infinite;
+        }
+    }
+}
+
+@keyframes sliding {
+    0% {
+        margin-top: 2px;
+    }
+    50% {
+        margin-top: -32px;
+    }
+    100% {
+        margin-top: 2px;
+    }
+}
+
+@keyframes sliding2 {
+    0% {
+        margin-top: 32px;
+    }
+    50% {
+        margin-top: 2px;
+    }
+    100% {
+        margin-top: 32px;
+    }
+}
